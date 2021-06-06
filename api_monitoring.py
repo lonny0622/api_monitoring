@@ -24,11 +24,11 @@ def api_monitoring():
 def send_mail():
     # 第三方 SMTP 服务
     mail_host = "smtp.qq.com"  # 设置服务器
-    mail_user = "hbutliving@foxmail.com"  # 用户名
-    mail_pass = "kygysqvqgwdbdgga"  # 口令
+    mail_user = "发送邮件的邮箱地址"  # 用户名
+    mail_pass = "口令"  # 口令
 
-    sender = 'hbutliving@foxmail.com'
-    receivers = ['649754673@qq.com','2956801806@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    sender = '发送邮件的邮箱地址'
+    receivers = ['接收邮件的的邮箱地址1','接收邮件的邮箱地址2']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
     message = MIMEText('api无法连接，请到服务器查看', 'plain', 'utf-8')
     message['From'] = Header("api监控程序", 'utf-8')
@@ -50,10 +50,10 @@ def send_mail():
 
 def remotConnect():
     # 服务器相关信息,下面输入你个人的用户名、密码、ip等信息
-    ip = "101.200.50.2"
+    ip = "服务器ip"
     port = 22
-    user = "root"
-    password = "mulan@2016"
+    user = "用户名"
+    password = "密码"
 
     # 创建SSHClient 实例对象
     ssh = paramiko.SSHClient()
